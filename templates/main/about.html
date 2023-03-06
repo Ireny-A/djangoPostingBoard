@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+{% block content %}
+
+    <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+
+        <h1 class="fw-light">Обо мне</h1>
+          <h2 class="lead text-muted">Здесь планируется разместить что-нибудь интересное, но не сегодня :)</h2><br>
+
+      </div>
+    </div>
+  </section>
+     <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+    <a href="{% url 'home' %}" class="btn btn-secondary my-2" >Вернуться на главную</a>
+      </div>
+    </div>
+    </section>
+{% endblock content %}

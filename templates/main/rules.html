@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+{% block content %}
+
+    <section class="py-6 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+
+        <h1 class="fw-light">Правила сайта</h1><br>
+          <h2 class="lead text-muted">Добро пожаловать на сайт «Жена на час» - интернет-ресурс, который поможет вам найти необходимую информацию по интересующим вас услугам, а так же опубликовать свои объявления. Будьте вежливы и соблюдайте принципы сообщества.</h2><br>
+        <p class="lead text-muted">Запрещается размещать на сайте сообщения, содержащие нецензурные слова и выражения.</p><br>
+        <p class="lead text-muted">Запрещается размещать на сайте материалы порнографического характера или гипертекстовые ссылки на сайты, содержащие такие материалы.</p><br>
+        <p class="lead text-muted">Запрещается размещать на сайте персональные данные, в том числе контактные данные, других пользователей или иных лиц без их предварительного согласия.</p><br>
+        <p class="lead text-muted">Запрещается инициировать политические дискуссии и участвовать в них.</p><br>
+        <p class="lead text-muted">Хорошего дня!</p><br>
+
+      </div>
+    </div>
+  </section>
+     <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+    <a href="{% url 'home' %}" class="btn btn-secondary my-2" >Вернуться на главную</a>
+      </div>
+    </div>
+    </section>
+{% endblock content %}
