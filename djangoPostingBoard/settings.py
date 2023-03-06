@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangoBoardPosting.urls'
+ROOT_URLCONF = 'djangoPostingBoard.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
 
 
 
-WSGI_APPLICATION = 'djangoBoardPosting.wsgi.application'
+WSGI_APPLICATION = 'djangoPostingBoard.wsgi.application'
 
 
 # Database
