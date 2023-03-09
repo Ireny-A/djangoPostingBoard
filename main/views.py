@@ -40,6 +40,7 @@ class UserPostListView(ListView):
         return Post.objects.filter(author=user).order_by('-date_posted')
 
 
+
 class PostDetailView(DetailView):
     model = Post
 
@@ -81,3 +82,5 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'main/about.html')
+
+

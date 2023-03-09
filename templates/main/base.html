@@ -4,6 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <title>Жена на час</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
@@ -21,13 +22,15 @@
     <link rel="stylesheet" href="{% static 'main/main.css' %}">
   </head>
 
+
   <body>
 
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="/static" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
       </a>
      <div class="masthead-brand">
-      <p>Жена на час</p>
+         <a href="{% url 'home' %}"><img  src="/media/skillet.jpg" height=60 width=80 ></a>
+        <span class="logo">Жена на час</span>
     </div>
 
     <div class="col-md-3 text-end">
@@ -35,17 +38,14 @@
                 <a href="{% url 'post-create' %}" class="btn btn-secondary my-2" >Новая запись</a>
                 <a href="{% url 'profile' %}" class="btn btn-secondary my-2" >Профиль</a>
                 <a href="{% url 'logout' %}" class="btn btn-secondary my-2" >Выход</a>
-
               {% else %}
-
                 <a href="{% url 'login' %}" class="btn btn-secondary my-2" >Вход</a>
                 <a href="{% url 'register' %}" class="btn btn-secondary my-2" >Регистрация</a>
-
               {% endif %}
     </div>
+    </header>
 
-</header>
-<main>
+    <main>
 
     {% if messages %}
                 {% for message in messages %}
@@ -58,25 +58,20 @@
     {% block content %}
     {% endblock content %}
 
-</main>
+    </main>
 
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-
-    <p class="col-md-4 mb-0 text-muted">© 2023, Ireny_a Inc</p>
-
-    <a href="/static" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"></a>
-
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="https://www.instagram.com/ireny_a/" class="nav-link px-2 text-muted">Instagram</a></li>
-      <li class="nav-item"><a href="https://www.facebook.com/irochka.anischenko" class="nav-link px-2 text-muted">Facebook</a></li>
-      <li class="nav-item"><a href="https://vk.com/vaviana" class="nav-link px-2 text-muted">VK</a></li>
-      <li class="nav-item"><a href="{% url 'info' %}" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-  </footer>
-
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">© 2023, Ireny_a</p>
+        <a href="/static" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"></a>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="https://www.instagram.com/ireny_a/" class="nav-link px-2 text-muted">Instagram</a></li>
+          <li class="nav-item"><a href="https://www.facebook.com/irochka.anischenko" class="nav-link px-2 text-muted">Facebook</a></li>
+          <li class="nav-item"><a href="https://vk.com/vaviana" class="nav-link px-2 text-muted">VK</a></li>
+          <li class="nav-item"><a href="{% url 'info' %}" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+    </footer>
 
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
 
   </body>
 </html>

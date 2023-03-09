@@ -1,7 +1,8 @@
 ﻿{% extends "main/base.html" %}
-
 {% block content %}
-    <section class="py-5 text-center container">
+
+        {% if page_obj.number == 1 %}
+             <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light" >Частные объявления</h1><br>
@@ -12,10 +13,10 @@
         <p>
           <a href="{% url 'rules' %}" class="btn btn-secondary my-2">Правила сайта</a>
         </p>
-
       </div>
     </div>
   </section>
+        {% endif %}
 
     {% for post in posts %}
         <div><center><article class="media content-section">
@@ -29,15 +30,13 @@
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
-        </center></div>
-        </div><br>
+        </div>
+        </center></div><br>
     {% endfor %}
 
     <div class="pagination justify-content-center">
     {% if is_paginated %}
-
       {% if page_obj.has_previous %}
-
         <a class="btn btn-outline-secondary mb-4 mr-1" href="?page=1">Первая</a>
         <a class="btn btn-outline-secondary mb-4 mr-1" href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
       {% endif %}
@@ -56,5 +55,6 @@
       {% endif %}
 
     {% endif %}
-  </div>
+    </div>
+
 {% endblock content %}

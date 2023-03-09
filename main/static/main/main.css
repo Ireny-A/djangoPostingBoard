@@ -50,7 +50,7 @@
         flex-direction: column;
         align-items: center;
         padding: 50px 40px;
-        color: white;
+        color: #ffffff;
         background: #FDEBD0;
         border-radius: 30px;
         box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
@@ -128,8 +128,9 @@
 
 
     .txt {
-        color: dimgray;
+        font-family: "Sansita Swashed", cursive;
     }
+
 
     h2.txt {
         color: dimgray;
@@ -144,6 +145,16 @@
         font-family: "Sansita Swashed", cursive;
     }
 
+     body  {
+  background-image: url('/media/fon.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 
 
@@ -151,19 +162,10 @@
 
 
 
-
-      /*body {*/
-    /*  background: linear-gradient(70deg, hotpink, yellow, deepskyblue);*/
-    /*  font-family: "Sansita Swashed", cursive;*/
+    /*  body {*/
+    /*  background: rebeccapurple;*/
+    /*  */
     /*}*/
 
 
-    /*body {*/
-    /*    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVaoisFy2gGfPEjaTww-OmmZ5Jzumol0vUIA&usqp=CAU");*/
-    /*    background-repeat: no-repeat;*/
-    /*    background-position: center center;*/
-    /*    -webkit-background-size: cover;*/
-    /*    -moz-background-size: cover;*/
-    /*    -o-background-size: cover;*/
-    /*    background-size: cover;*/
-    /*}*/
+

@@ -1,25 +1,5 @@
 {% extends "main/base.html" %}
-{% load crispy_forms_tags %}
 {% block content %}
-
-{#<style>#}
-{##}
-{#form.border{#}
-{#    display: flex;#}
-{#  flex-direction: column;#}
-{#  align-items: center;#}
-{#  padding: 50px 40px;#}
-{#  color: white;#}
-{#  background: rgba(0, 0, 0, 0.8);#}
-{#  border-radius: 10px;#}
-{#  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),#}
-{#    0 1px 1px rgba(128, 128, 128, 0.155),#}
-{#    0 2.1px 2.1px rgba(128, 128, 128, 0.195),#}
-{#    0 4.4px 4.4px rgba(128, 128, 128, 0.241),#}
-{#    0 12px 12px rgba(128, 128, 128, 0.35);#}
-{#}#}
-{##}
-{#</style>#}
 
     <div class="content-section">
         <form class="border" method="POST">
@@ -51,11 +31,12 @@
         </form>
 
     </div>
-    <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-    <a href="{% url 'home' %}" class="btn btn-secondary my-2" >Вернуться на главную</a>
-      </div>
-    </div>
-    </section>
+
+{#    <section class="py-5 text-center container">#}
+{#    <div class="row py-lg-5">#}
+{#      <div class="col-lg-6 col-md-8 mx-auto">#}
+{#    <a href="{% url 'home' %}" class="btn btn-secondary my-2" >Вернуться на главную</a>#}
+{#      </div>#}
+{#    </div>#}
+{#    </section>#}
 {% endblock content %}

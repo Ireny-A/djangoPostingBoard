@@ -1,9 +1,13 @@
 {% extends "main/base.html" %}
-
 {% block content %}
-    <h1 class="mb-3">Записи пользователя {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
+
+    <div class="curs" ><center>
+    <h1 class="txt">Записи пользователя {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1><br>
+    </center></div>
+
     {% for post in posts %}
         <article class="media content-section">
+        <div class="alert alert-warning">
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
@@ -13,11 +17,12 @@
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
+        </div>
         </article>
     {% endfor %}
+
     <div class="pagination justify-content-center"> 
     {% if is_paginated %}
-
       {% if page_obj.has_previous %}
         <a class="btn btn-outline-info mb-4 mr-1" href="?page=1">Первая</a>
         <a class="btn btn-outline-info mb-4 mr-1" href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
@@ -38,4 +43,5 @@
 
     {% endif %}
   </div>
+
 {% endblock content %}
