@@ -21,6 +21,7 @@ def index(request):
 def rules(request):
     return render(request, 'main/rules.html')
 
+
 class PostListView(ListView):
     model = Post
     template_name = 'main/index.html'
@@ -38,7 +39,6 @@ class UserPostListView(ListView):
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user).order_by('-date_posted')
-
 
 
 class PostDetailView(DetailView):
@@ -82,5 +82,3 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'main/about.html')
-
-
