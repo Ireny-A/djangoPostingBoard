@@ -5,9 +5,9 @@ from .models import Profile
 from PIL import Image
 
 
-@receiver(pre_save, sender=User)
-def user_pre_save(sender, instance, **kwargs):
-    instance.username = instance.username.upper()
+# @receiver(pre_save, sender=User)
+# def user_pre_save(sender, instance, **kwargs):
+#     instance.username = instance.username.upper()
 
 
 @receiver(post_save, sender=User)
